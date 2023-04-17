@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <title>plantilla</title>
+        <meta charset="utm-8">
+        <meta charset="author" content="marco">
+        <meta charset="revised" content="">
+        <meta charset="descrption" content="">
+        <style>
+            p{ color: limegreen; background-color: black;}
+            .moverX:hover{ transform: translateX(10px);}
+            .moverY:hover{ transform: translateY(10px);}
+            .moverXY:hover{ transform: translate(20px,5PX);}
+            .rotaX:hover{ transform: rotateX(180deg);}
+            .rotaY:hover{ transform: rotateY(180deg);}
+            .rotaXY:hover{ transform: rotate(10deg);}
+            .escalarX:hover{ transform: scaleX(1.5);}
+            .escalarY:hover{ transform: scaleY(1.5);}
+            .escalarXY:hover{ transform: scale(1.5,1.5);}
+            .barridoX:hover{ transform: skewX(30deg);}
+            .barridoY:hover{ transform: skewY(10deg);}
+            .matrix_X:hover{ transform: scaleY(1.5);transform: translate(10px);}
+            .efecto{height: 75%; font-size: 75%; transition: height 0.5s, font-size 0.5s;}
+            .efecto:hover{height: 125%; font-size: 125%;}
+            .rainbow{ height: 100px; width: 100px;
+                animation-name: rgb; animation-duration: 2.5s;
+                animation-timing-function: linear;    
+                animation-iteration-count: infinite;}
+            .arcoiris{ height: 100px; width: 100px;
+                animation-name: rgb; animation-duration: 2.5s;
+                animation-iteration-count: infinite;}
+        
+            @keyframes  rgb{
+                0%{ background-color: green;}
+                16%{background-color: yellow;}
+                33%{background-color: orange;}
+                50%{background-color: red;}
+                67%{background-color: purple;}
+                82%{background-color: blue;}
+                100%{ background-color: green;}
+            } 
+            .barraProgreso{ height: 25px; width: 1000px; background-color: gray;
+            color: black; font-size: 125%; font-weight: bold; text-align: center;
+        text-transform: uppercase; animation-timing-function: linear; animation-direction: reverse;
+    animation-name: progreso; animation-duration: 10s; animation-delay: 5s;}
+    @keyframes progreso{
+        0%{ background-color:white;width: 0px;}
+        13%{ background-color:red;width: 333px;}
+        66%{ background-color:gold;width: 666px;}
+        100%{ background-color: darkgreen; width: 999px;}
+    }  
+        </style>
+    </head>
+    <body>
+        <hgroup>|
+            <h1>efectos css</h1>
+            <h2>translate</h2>
+            <p>upslp (sin efecto)</p>
+            <p class="moverX"> upslp (mover en x)</p>
+            <p class="moverY"> upslp (mover en y)</p>
+            <p class="moverXY"> upslp (mover en x,y)</p>
+        </hgroup>
+        <hgroup>
+            <h2>rotar</h2>
+            <p class="rotaX"> upslp (rotar en x)</p>
+            <p class="rotaY"> upslp (rotar en y)</p>
+            <p class="rotarXY"> upslp (rotar en x,y)</p>
+        </hgroup>
+        <hgroup>
+            <h2>escalar</h2>
+            <p class="escalarX"> upslp (escalar en x)</p>
+            <p class="escalarY"> upslp (escalar en y)</p>
+            <p class="escalarXY"> upslp (escalar en x,y)</p>
+        </hgroup>
+        <hgroup>
+            <h2>skew</h2>
+            <p class="barridoX"> upslp (escalar en x)</p>
+            <p class="barridoY"> upslp (escalar en y)</p>
+        </hgroup>
+        <hgroup>
+            <h2>matrix</h2>
+            <p class="matrix_X"> upslp (escalar en x)</p>
+            <p class="barridoY"> upslp (escalar en y)</p>
+        </hgroup>
+        <hgroup>
+            <h2> transition</h2>
+            <div class="efecto"><a href="#">MENU 1</a></di>
+            <div class="efecto"><a href="#">MENU 2</a></di>
+             <div class="efecto"><a href="#">MENU 3</a></di>    
+        </hgroup>
+        <hgroup>
+        <h2>animation</h2>
+        <div class="rainbow" style="color: white ; font-weight: bold;">suavizado</div>
+        <div class="arcoiris" style="color: white ; font-weight: bold;">normal</div>
+        <div class="barraProgreso" >TIEMPO RESTANTE</div>
+        </hgroup>
+    </body>
+</html>

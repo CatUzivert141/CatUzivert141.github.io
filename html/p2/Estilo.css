@@ -1,0 +1,40 @@
+body{ color: gold;}
+.grup_1{ color: darkgreen;}
+#item1 { color: red;}
+#item2 { color: blue;}
+#item3 { color: yellow;}
+#item4 { color: green;}
+#link_1 { text-decoration: overline;}
+#link_2 { text-decoration: none;}
+#link_3 { text-decoration: line-through;}
+#link_4 { text-decoration: underline line ;}
+#link_5 { text-decoration: underline;}
+
+p{
+    background-color: black;
+    margin: 25px 50px;
+    text-align: center;
+    text-indent: 50px;
+    line-height: 2;
+
+}
+#parrafoEspecial {
+    background-color: darkblue;
+    color: white;
+    text-align: justify;
+    text-transform: uppercase;
+    font-family: 'Alkatra', cursive;
+}
+#miCuadro {
+    border: 5px solid black;
+}
+th,td {
+    border: 1px dotted gray;
+}
+.alterno {
+    background-color: gray;
+}
+th:hover,td:hover {
+    background-color: lightgreen;
+    color: black;
+}
