@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Unidad 03 - Ejercicio 3</title>
+        <meta charset="utf-8">
+        <meta name="author" content="marco">
+        <meta name="revised" content="">
+        <meta name="Descripcion" content="if, else, switch">
+        <style>.Tit{background-color: rgb(92, 22, 172); color: rgb(78, 175, 14);}</style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - Bucles</h1>
+        <script>
+            /*4.2.1.15 Bucles Tarea*/
+            //Tarea No. 1//
+            var varNum;
+
+            //For//
+            for(varNum = 100; varNum>=0; varNum -=10){
+                console.log("For >> Valor: " + varNum);
+            }
+
+            //Do while//
+            varNum = 100;
+            do{
+                console.log("Do-While >> Valor: " + varNum);
+                varNum -=10;
+            }while(varNum>=0);
+
+            //while//
+            varNum=100;
+            while(varNum >=0){
+                console.log("While >> Valor: " + varNum);
+                varNum -= 10;
+            }
+
+            //For infinito//
+            varNum=100;
+            for(;;){
+                console.log("ForInfinito >> Valor: " + varNum);
+                if(varNum>0)
+                varNum -=10;
+                else
+                break;
+            }
+
+            //Tarea No. 2//
+            let varNum1 = Number(prompt("Valor inicial de la secuencia: "));
+            let varNum2 = Number(prompt("Valor final de la secuencia: "));
+            let varDelta = Number()
+
+            let bandera=false, bandic= false
+            if(varNum1 > varNum2) bandera = true;
+            else bandic = true;
+
+            if(Number.isNaN(varNum1) || Number.isNaN(varNum2)) { alert("Los valores deben ser numericos...");}
+            else{
+                for(varNum = varNum1; ; ) {
+                    console.log("ForDinamico >> Valor: " + varNum);
+                    if(bandera) { varNum -= 10; if(varNum >= varNum2) continue; else break;}
+                    else {varNum += 10; if(varNum <= varNum2) continue; else break; }
+                }
+            }
+        </script>
+    </body>
+</html>

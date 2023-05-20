@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Unidad 03 - Ejercicio 2</title>
+        <meta charset="utf-8">
+        <meta name="author" content="marco">
+        <meta name="revised" content="Martes 25 de Abril del 2023">
+        <meta name="Descripcion" content="let, alert, functio">
+<style>
+        .Tit{background-color: rgb(92, 22, 172); color: rgb(78, 175, 14);}
+</style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - var & Alert</h1>
+    </body>
+    <body>
+    <script>
+        let x = 100, y = 50;
+        alert("El valor de X (Main): " + x);
+        alert("El valor de Y (Main): " + y);
+
+        function testFunction(){
+            let x = 1, y = 5;
+            alert("El valor de X (funcion): " + x);
+            alert("El valor de Y (funcion): " + y);
+    }
+    testFunction();
+    alert("... Se procede a continuar con la carga de la pagina.");
+    </script>
+    <script>
+        /*2.1.1.19 Variables - Tareas*/
+
+    const precioRosa = 8;
+    const lircosto = 10;
+    const tulipanesValor = 2;
+
+        let numRosa = 70, totalRosa;
+        let lircant = 50, importelirio;
+        let tulipanesExist = 120,  tulipantotal;
+        let total = 0;
+
+        function calcular() {
+            totalRosa = precioRosa * numRosa;
+            importelirio = lircosto * lircant;
+            tulipantotal = tulipanesValor * tulipanesExist;
+            total = totalRosa+importelirio+tulipantotal;
+        }
+
+        function imprime() {
+        alert("Rosa >> Precio: $" + precioRosa + ", Cantidad: " + numRosa + ", Importe: $" + totalRosa +
+        "\nLirio >> Precio: $" + lircosto + ", Cantidad: "+ lircant + ", Importe: $"+ importelirio + 
+        "\nTulipan >> Precio: $" + tulipanesValor + ", Cantidad: "+ tulipanesExist + ", Importe: $" + tulipantotal +
+        "\n\nTotal: $" + total);
+        }
+
+        calcular();
+        imprime();
+
+        numRosa -= 20; 
+        lircant -=30;
+        tulipanesExist -=60;
+
+        calcular();
+        imprime ();
+    </script>
+    <script>
+        /* 2.1.1.20 Laboratorio Variables */ 
+        let nombre, telefono, correo;
+
+        function Imprime(strnombre, strtelefono, strcorreo) {
+            alert("Nombre: " + strnombre + "\nTelefono: " + strtelefono + "\nCorreo: " + strcorreo +
+            "\n\nCadena Formatadea: ["+ strnombre + "/" + strtelefono + "/" + strcorreo +"]");
+        }
+        nombre="Maxwell Wright	";
+        telefono="(0191) 719 6495	";
+        correo="Curabitur.egestas.nunc@nonummyac.co.uk";
+        Imprime(nombre, telefono, correo);
+
+        nombre="Raja Villarreal	";
+        telefono="0866 398 2895	";
+        correo="posuere.vulputate@sed.com";
+        Imprime(nombre, telefono, correo);
+
+        nombre="Helen Richards	";
+        telefono="0800 1111	";
+        correo="libero@convallis.edu";
+        Imprime(nombre, telefono, correo);
+    </script>
+    </body>
+</html>

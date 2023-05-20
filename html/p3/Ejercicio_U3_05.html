@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Unidad 03 - Ejercicio 3</title>
+        <meta charset="utf-8">
+        <meta name="author" content="marco">
+        <meta name="revised" content="Martes 25 de Abril del 2023">
+        <meta name="Descripcion" content="let, alert, functio">
+        <style>.Tit{background-color: rgb(92, 22, 172); color: rgb(78, 175, 14);}</style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - Operadores e Interaccion con el Usuario</h1>
+        <script>
+            /* 3.3.1.7 Interaccion con el usuario */
+            let varAnchura = prompt("Introduce el valor para la anchura de la caja...", "20");
+            let varAltuta = prompt("Introduce el valor para la altura de la caja...", "10");
+            let varLong = prompt("Introduce el valor para la Longitud de la caja...", "50");
+
+            let banAncho, banAlto, banLargo;
+            let strError = "Los siguentes valores no son correctos: ";
+
+            banAncho = varAnchura ? true : false;
+            banAlto = varAltuta ? true : false;
+            banLargo = varLong ? true : false;
+
+            if(!banAncho)
+            strError += "\n - Anchura";
+            if(!banAlto)
+            strError += "\n - Alto";
+            if(!banLargo)
+            strError += "\n - Largo";
+
+            if(banAncho && banAlto && banLargo)
+            alert("El volumen de la caja es de: " + (varAnchura * varAltuta * varLong) + " Unidades cubicas.");
+            else
+            alert(strError);
+        </script>
+    </body>
+</html>
