@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="estiloscss/reglas.css">
+    <style>
+        body{
+        background-color: white;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="cont-menu active" id="menu">
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li> <a href="reglas.html">informacion</a> </li>
+                <li> <a href="esenario.html">esenarios</a> </li>
+                <li> <a href="actualidad.html">actualidad</a> </li>
+                <li><a href="redes-sociales.html">redes-sociales</a> </li>
+                <li> <a href="multimedia.html">multimedia</a> </li>
+                <li> <a href="referencias.html">referencias</a> </li>
+             </ul>
+        </div>
+        <script src="js/informacion.js"></script>
+    </header>
+    <div class="text-slider-wrapper">
+        <div class="text-slider">
+              <div class="text-slide"> <h1> categorias y reglas  <br> del baile </h1></div>
+              <div class="text-slide"><h2>
+            <ol>
+                <li>2 vs 2: En esta categoría,<br> dos bailarines forman un equipo y compiten<br> contra otro equipo de dos bailarines.</li>
+                <li>All Styles: En esta categoría, los bailarines pueden <br> cualquier estilo de baile,<br> desde el hip-hop hasta el ballet,<br> y mostrar su creatividad y versatilidad en el escenario.</li>
+                <li>Freestyle: Esta categoría se enfoca específicamente <br>en el estilo de baile hip-hop y los bailarines compiten entre sí para <br> mostrar su habilidad y creatividad en este estilo.</li> 
+            </ol>
+              </h2></div>
+              <div class="text-slide"><h2>
+                <ol>
+                    <li>Duración de la ronda: Las batallas de baile pueden durar desde unos pocos <br> minutos hasta varios minutos, dependiendo del evento y la categoría.</li>
+                    <li>Turnos: Los bailarines se turnan para realizar sus movimientos y <br>rutinas en el escenario, y a menudo hay un tiempo limitado para cada turno.</li>
+                    <li>Puntuación: Los jueces evalúan a los bailarines en función de la musicalidad, <br>la creatividad, la técnica y otros factores, y <br>otorgan puntuaciones para cada ronda.</li>
+                    <li>Eliminación: En algunos eventos, los bailarines pueden ser <br> eliminados de la competencia si no cumplen con ><br>ciertos criterios o si no reciben una puntuación suficiente de los jueces.</li> 
+                </ol>
+            </h2></div>
+        </div>
+  </div>
+
+  <div class="slider-control">
+        <div class="prev"><button type="button"><ion-icon name="arrow-back"></ion-icon></button></div>
+        <div class="next"><button type="button"><ion-icon name="arrow-forward"></ion-icon></button></div>
+  </div>
+
+  <div class="blocks">
+        <div class="block-1"></div>
+        <div class="block-2"></div>
+        <div class="block-3"></div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="image-slider">
+        <div class="image-slide" id="one" style="background: url(https://mikijimenezblog.files.wordpress.com/2017/04/les-twins-2.gif) no-repeat 50% 50%; background-size: cover;"></div>
+        <div class="image-slide" id="two" style="background: url(https://thumbs.gfycat.com/KeySardonicChafer-max-1mb.gif) no-repeat 50% 50%; background-size: cover;"></div>
+        <div class="image-slide" id="three" style="background: url(https://64.media.tumblr.com/7ef8b36b649fc0966088fa8daf085b5e/tumblr_ocp9fyQHDw1todxzco4_500.gif) no-repeat 50% 50%; background-size: cover;"></div>
+  </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <script src="js/reglas.js"></script>
+</body>
+</html>
