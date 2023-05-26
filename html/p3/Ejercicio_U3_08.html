@@ -1,18 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Unidad 03 - Ejercicio 3</title>
-        <meta charset="utf-8">
-        <meta name="author" content="marco">
-        <meta name="revised" content="">
-        <meta name="Descripcion" content="if, else, switch">
-        <style>.Tit{background-color: rgb(92, 22, 172); color: rgb(78, 175, 14);}</style>
-    </head>
-    <body>
-        <h1 class="Tit">JavaScript - Funciones & Eventos</h1>
-        <h2>Eventos del mouse</h2>
-        <p style="background-color: aquamarine;" onmouseover="alert('Acababas de entrar al parrafo... :)');"
-        onmouseout="alert('Acababas de salir del parrafo... :)');" onclick="console.log('Presionaste el parrafo...');"
-        </p>
-    </body>
+<head>
+    <title>Unidad 03-Ejercicio 08</title>
+    <meta charset="utf-8">
+    <meta name="author" content="marco antonio">
+    
+<style>
+    .Tit{ background-color: black; color: aqua;
+    }
+    
+</style>
+
+</head>
+
+<body onload="if(confirm('Para poder acceder debes aceptar las cookiesdel sitio...') == false) window.location='https://www.google.com/'"> 
+    
+    
+    <h1 class="Tit">JavaScript - Funciones & Eventos</h1>
+    <h2>JavaScript contenido enetiqueta</h2>
+    <button onclick="document.body.style.backgroundColor= 'lightgreen';" 
+    ondblclick="document.body.style.backgroundColor = 'lightgreen';">Cambia color de fondo</button>
+    <button id="btnColor">Cambia fondo</button>
+    <button id="btnSaludar">Saluda a todos</button>
+
+    <script>
+        /*Modo basico*/
+        let button= document.getElementById("btnColor");
+
+        function funcolor_A(){
+            document.body.style.backgroundColor = 'lightblue';
+        }
+        function funcolor_B(){
+            document.body.style.backgroundColor = 'pink';
+        }
+        button.addEventListener('click',funcolor_A);
+        button.addEventListener('dbclick',funcolor_B);
+         /*Modo optimizado*/
+        document.getElementById("btnSaludar").addEventListener('click',() =>{
+             alert("Hola alumnos de la UPSLP...\nTengan un buen dia\n:)");
+         } );
+    </script>
+    <h2>Eventos del mouse</h2>
+    <p style="background-color: aquamarine;" onmouseover="alert('Acabas de pasar por encima del aparrado');"onmouseout="alert('Acabas de salir del parrafo');">Puedes pasar por encima del parrafo o hacer click en el</p>
+    <label>Nombre:</label>
+    <input type="text" id="varNombre" placeholder="(Nombre)">
+    <input type="button" value="Accion" 
+        onclick="let varMensaje='Hola ' + document.getElementById('varNombre').value + ',como Estas?'; 
+            document.getElementById('varResultado').value=varMensaje; alert(varMensaje);"><br>
+    <label>Resultados:</label>
+    <input type="text" id="varResultado" placeholder="(Resultados)" readonly>
+    <table border="5">
+        <thead>
+          <tr>
+            <th>Figura</th>
+            <th>Datos</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">Cuadrado</td>
+            <td>Base<input type="number" id="varBase" ><br></td>
+            <td rowspan="2">
+                Area:
+                <input type="number" id="varAreaCuadrado" readonly>
+                <input type="button" value="Calcular"
+                    onclick="document.getElementById('varAreaCuadrado').value = document.getElementById('varBase').value
+                        * document.getElementById('varAltura').value;"></td>
+          </tr>
+          <tr>
+            <td>Altura<input type="number" id="varAltura"  ></td>
+          </tr>
+          <tr>
+            <td>Cubo<br></td>
+            <td>Profundidad<input type="number" id="varProfundidad" readonly></td>
+            <td>
+                Volumen:
+                <input type="number" id="varVolumen" readonly>
+                <input type="button" value="Calcular"
+                    onclick="document.getElementById('varArea').value =
+                    document.getElementById('varBase').valuen * document.getElementById('varAltura').value; 
+                    document.getElementById('varVolumen').value = document.getElementById('varArea').value
+                    * document.getElementById('varProfundidad').value;"></td>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+        <h2>Geolocalizacion</h2>
+        <button onclick="getLocation()">Obtener coordenadas</button>
+        <p id="data"></p>
+        <p id="map"></p>
+        <script>
+          function getLocation(){
+            if(navigator.geolocation) {navigator.geolocation.getCurrentPosition(showposition); }
+            else{ alert("Geolocalizacion no soportada por el navegador..."); }
+          }
+          function showposition(position) {
+            document.getElementById("data").innerHTML = "Latitud: " + position.coords.latitude;
+            document.getElementById("data").innerHTML += "<br>Longitud: " + position.coords.longitude;
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+            latlon = '22.121929, -100.984327';
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
+            document.getElementById("map").innerHTML = "<img src= '" + img_url + "'>";
+          }
+        </script>
+        <h2>Google Maps</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29565.925454695884!2d-100.97329823862304!3d22.135860758194266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a9f5412c6b56f%3A0xe1b3dea4c6aa1c03!2sUniversidad%20Polit%C3%A9cnica%20de%20San%20Luis%20Potos%C3%AD!5e0!3m2!1ses-419!2smx!4v1684345534895!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>Almacenamiento</h2>
+        <button onclick="aumentacontador_1()">Contador No.1</button>
+        <label>Contador No.1: </label>
+        <input type="number" id="varContador1" placeholder="(Contador No.1)" readonly>
+        <br>
+        <button onclick="aumentacontador_2()">Contador No.2</button>
+        <label>Contador No.2: </label>
+        <input type="number" id="varContador2" placeholder="(Contador No.2)" readonly>
+        <script>
+          function aumentacontador_1() {
+            if (typeof(Storage) != "undefined") {
+              if (localStorage.contador_1) {
+                  localStorage.contador_1++;
+                }else{
+                  localStorage.contador_1 = 1;
+                }
+                document.getElementById('varContador1').value = localStorage.contador_1;
+            }else{
+              alert("Almacenamiento no soportada por el navegador...")
+            }
+            function aumentacontador_2() {
+              if (typeof(Storage) != "undefined") {
+                if(sessionStorage.contador_2){
+                  sessionStorage,contador_2++;
+                }else{
+                  sessionStorage.contador_2 = 1;
+                }
+                document.getElementById('varContador2').value = sessionStorage.contador_2;
+            }else{
+              alert("Almacenamiento no soportada por el navegador...")
+            }
+            }
+          }
+        </script>
+</body>
 </html>
